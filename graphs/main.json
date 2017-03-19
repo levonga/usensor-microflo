@@ -1,0 +1,69 @@
+{
+    "caseSensitive": false,
+    "properties": {
+        "name": "main",
+        "environment": {
+            "type": "all"
+        },
+        "icon": ""
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "Timer_8o4ma": {
+            "component": "Timer",
+            "metadata": {
+                "label": "Timer",
+                "x": 648,
+                "y": 288,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "UltrasoundSR04_56osf": {
+            "component": "UltrasoundSR04",
+            "metadata": {
+                "label": "UltrasoundSR04",
+                "x": 828,
+                "y": 288,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "SerialOut_6wjax": {
+            "component": "SerialOut",
+            "metadata": {
+                "label": "SerialOut",
+                "x": 1044,
+                "y": 288,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "Timer_8o4ma",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "UltrasoundSR04_56osf",
+                "port": "trigger"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "UltrasoundSR04_56osf",
+                "port": "distance"
+            },
+            "tgt": {
+                "process": "SerialOut_6wjax",
+                "port": "in"
+            },
+            "metadata": {}
+        }
+    ]
+}
