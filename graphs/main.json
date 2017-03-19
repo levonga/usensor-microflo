@@ -64,6 +64,34 @@
                 "port": "in"
             },
             "metadata": {}
+        },
+        {
+            "data": "4",
+            "tgt": {
+                "process": "UltrasoundSR04_56osf",
+                "port": "trigpin"
+            }
+        },
+        {
+            "data": "5",
+            "tgt": {
+                "process": "UltrasoundSR04_56osf",
+                "port": "echopin"
+            }
+        },
+        {
+            "data": "100",
+            "tgt": {
+                "process": "UltrasoundSR04_56osf",
+                "port": "maxdistance"
+            }
+        },
+        {
+            "data": "1000",
+            "tgt": {
+                "process": "Timer_8o4ma",
+                "port": "interval"
+            }
         }
     ]
 }
